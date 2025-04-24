@@ -20,12 +20,12 @@ Producto.init({
         type:DataTypes.TEXT,
         allowNull: false,
     },
-    // image:{
-    //     type: DataTypes.TEXT,
-    //     allowNull: false,
-    //     defaultValue:
-    //       "https://st2.depositphotos.com/1310390/5294/v/950/depositphotos_52942549-stock-illustration-set-of-black-silhouette-food.jpg",
-    //   },
+    image:{
+        type: DataTypes.TEXT,
+        allowNull: false,
+        defaultValue:
+          "assets/Cocinas/CocinaAltobrillo.jpeg",
+      },
 },
 {
     sequelize,

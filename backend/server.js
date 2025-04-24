@@ -5,6 +5,9 @@ const app = express();
 
 app.use(express.json());
 
+const cors = require('cors');
+app.use(cors());
+
 const routes = require("./api.routes");
 app.use("/coarquitec/", routes);
 
