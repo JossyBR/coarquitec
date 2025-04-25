@@ -13,5 +13,6 @@ router.post('/', productoController.create)
 router.put('/:id', productoController.update)
 router.delete('/:id', productoController.destroy)
 router.get('/:id', productoController.show)
+router.get("/images/:image", productoController.getimage);
 
 module.exports = router;

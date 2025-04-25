@@ -2,6 +2,8 @@ const Producto = require("../models/producto.models");
 
 const { Op } = require("sequelize");
 
+const path = require('path');
+
 const index = async (req, res) => {
   // try {
   //   console.log("Hola estas creando un producto");
@@ -151,10 +153,25 @@ const show = async (req, res) => {
   // }
 };
 
+// const getimage = async (req, res) => {
+//   const image = req.params.image
+//   const pathImage = await path.join(process.cwd(), './src/assets/cocinas', image);
+
+//   return res.sendFile(pathImage);
+// }
+
+const getimage = async (req, res) => {
+  const image = req.params.image;
+  const pathImage = path.join(process.cwd(), './src/assets/cocinas', image);
+  return res.sendFile(pathImage);
+};
+
+
 module.exports = {
   index,
   create,
   update,
   destroy,
   show,
+  getimage
 };

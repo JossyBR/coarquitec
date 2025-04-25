@@ -9,7 +9,12 @@ const cors = require("cors");
 app.use(cors());
 
 //Adiciono esto para que las imagenes queden expuestas
-app.use("/assets", express.static("assets"));
+// app.use("/assets", express.static("assets"));
+
+
+
+// // Esto sirve la carpeta 'assets' como pública
+// app.use('/assets', express.static(path.join(__dirname, 'src', 'assets')));
 
 const routes = require("./api.routes");
 app.use("/coarquitec/", routes);
